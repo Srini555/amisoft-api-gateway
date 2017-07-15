@@ -1,0 +1,42 @@
+---
+server:
+  port: 9003
+
+security:
+  basic:
+    enabled: false
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/amisoft  #your database url. Replace "xxx.x.x.x" with your ip address.
+    username: root #database schema user name
+    password: root #database schema password
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+  cloud:
+    consul:
+      host: ${consul.host}
+      port: ${consul.port}
+  application:
+    name: amisoft-api-gateway
+
+
+management:
+  security:
+    enabled: false
+
+
+zuul:
+  routes:
+    amisoft:
+         path: /amisoft/**
+         serviceId: amisoft-service-welcome
+
+
+
+
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
