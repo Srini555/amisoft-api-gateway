@@ -4,10 +4,9 @@ package com.amisoft.entity;
  * Created by amitdatta on 16/07/17.
  */
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+@Entity
 @Table(name = "t_employee")
 public  class Employee {
 
