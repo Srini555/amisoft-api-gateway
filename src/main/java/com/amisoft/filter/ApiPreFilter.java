@@ -22,7 +22,7 @@ public class ApiPreFilter extends ZuulFilter {
 
     private static final String EMPLOYEE_NAME = "name";
     private static final String AUTHORIZATION = "Authorization";
-    private static final String BEARER = "Bearer ";
+    private static final String BEARER = "Bearer";
     private static final String PRE = "pre";
     public static final String ACCESS_DENIED = "Access denied";
 
