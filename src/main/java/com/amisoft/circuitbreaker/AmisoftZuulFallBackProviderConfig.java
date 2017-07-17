@@ -11,14 +11,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AmisoftZuulFallBackProviderConfig {
 
-    private static final String AMISOFT_SERVICE_WELCOME = "amisoft-service-welcome";
+    private static final String AMISOFT_SERVICE_SECURE = "amisoft-secure-resource";
 
 
     @Bean
-    public ZuulFallbackProvider routeAmisoftServiceWelcome(){
+    public ZuulFallbackProvider routeAmisoftServiceSecure(){
 
         AmisoftFallBackProvider routeAmisoftServiceWelcomeFallback = new AmisoftFallBackProvider();
-        routeAmisoftServiceWelcomeFallback.setRoute(AMISOFT_SERVICE_WELCOME);
+        routeAmisoftServiceWelcomeFallback.setRoute(AMISOFT_SERVICE_SECURE);
         return routeAmisoftServiceWelcomeFallback;
     }
 
