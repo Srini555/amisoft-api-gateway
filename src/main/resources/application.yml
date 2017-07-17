@@ -23,6 +23,9 @@ spring:
       port: ${consul.port}
   application:
     name: amisoft-api-gateway
+  sleuth:
+    sampler:
+      percentage: ${zipkin.sleuth.sampler.percentage}
 
 
 management:
